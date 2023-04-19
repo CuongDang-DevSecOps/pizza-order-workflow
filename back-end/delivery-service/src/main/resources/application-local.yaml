@@ -1,0 +1,12 @@
+server:
+  port: 5003
+
+spring:
+  kafka:
+    bootstrap-servers: http://localhost:9092
+    consumer:
+      auto-offset-reset: earliest
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
